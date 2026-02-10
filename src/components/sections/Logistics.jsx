@@ -48,15 +48,14 @@ export function Logistics() {
     europe: {
       title: 'Europe',
       countries: [
-        'Germany', 'Poland', 'France', 'Netherlands',
-        'Italy', 'Spain', 'Romania', 'Czech Republic'
+        'Germany', 'Poland', 'Estonia', 'Lithuania','Latvia',
+        'Czech Republic', 'Slovenia', 'Slovakia', 'Hungary'
       ]
     },
     asia: {
       title: 'Asia',
       countries: [
-        'Turkey', 'Kazakhstan', 'Uzbekistan', 'China',
-        'India', 'Vietnam', 'Thailand', 'South Korea'
+        'Kazakhstan', 'Uzbekistan', 'Azerbaijan', 'Armenia'
       ]
     }
   };
