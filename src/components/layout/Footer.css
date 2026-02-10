@@ -1,0 +1,158 @@
+/* --- Переменные (цвета) --- */
+:root {
+    --footer-bg: #111827;       /* gray-900 */
+    --footer-text: #d1d5db;     /* gray-300 */
+    --footer-white: #ffffff;
+    --footer-border: #1f2937;   /* gray-800 */
+    --footer-accent: #4ade80;   /* green-400 */
+  }
+  
+  /* Обертка футера */
+  .footer-wrapper {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    font-family: sans-serif;
+  }
+  
+  /* Контейнер */
+  .footer-container {
+    max-width: 80rem; /* max-w-7xl */
+    margin: 0 auto;
+    padding: 3rem 1rem; /* py-12 px-4 */
+  }
+  
+  @media (min-width: 640px) {
+    .footer-container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .footer-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  /* --- Сетка (Grid) --- */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* По умолчанию 1 колонка */
+    gap: 2rem; /* gap-8 */
+    margin-bottom: 2rem; /* mb-8 */
+  }
+  
+  @media (min-width: 768px) {
+    .footer-grid {
+      grid-template-columns: repeat(4, 1fr); /* 4 колонки на md+ */
+    }
+  }
+  
+  /* --- Типографика колонок --- */
+  .footer-brand {
+    color: var(--footer-white);
+    font-size: 1.25rem; /* text-xl */
+    margin-bottom: 1rem; /* mb-4 */
+    font-weight: 600;
+  }
+  
+  .footer-description {
+    font-size: 0.875rem; /* text-sm */
+    line-height: 1.625; /* leading-relaxed */
+  }
+  
+  .footer-heading {
+    color: var(--footer-white);
+    font-weight: 600;
+    margin-bottom: 1rem; /* mb-4 */
+    margin-top: 0;
+  }
+  
+  /* --- Списки и Ссылки --- */
+  .footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.875rem; /* text-sm */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* space-y-2 */
+  }
+  
+  .footer-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+    cursor: pointer;
+  }
+  
+  .footer-link:hover {
+    color: var(--footer-accent);
+  }
+  
+  /* --- Контакты --- */
+  .contact-list {
+    gap: 0.75rem; /* space-y-3 */
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem; /* gap-2 */
+  }
+  
+  /* Иконки в контактах */
+  .footer-icon {
+    width: 1rem; /* w-4 */
+    height: 1rem; /* h-4 */
+    margin-top: 0.25rem; /* mt-1 для выравнивания с текстом */
+    flex-shrink: 0;
+  }
+  
+  /* --- Нижняя часть (Bottom Bar) --- */
+  .footer-bottom {
+    border-top: 1px solid var(--footer-border);
+    padding-top: 2rem; /* pt-8 */
+  }
+  
+  .footer-bottom-content {
+    display: flex;
+    flex-direction: column; /* На мобилках колонкой */
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem; /* gap-4 */
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .footer-bottom-content {
+      flex-direction: row; /* На десктопе в строку */
+      text-align: left;
+    }
+  }
+  
+  .footer-copyright {
+    font-size: 0.875rem; /* text-sm */
+    margin: 0;
+  }
+  
+  /* --- Новые стили для юридических ссылок --- */
+  .footer-legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem; /* Расстояние между ссылками */
+  }
+  
+  .footer-legal-link {
+    color: var(--footer-text);
+    text-decoration: none;
+    font-size: 0.875rem; /* text-sm */
+    transition: color 0.2s;
+  }
+  
+  .footer-legal-link:hover {
+    color: var(--footer-accent);
+    text-decoration: underline;
+  }

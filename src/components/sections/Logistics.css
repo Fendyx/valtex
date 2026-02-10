@@ -1,0 +1,313 @@
+/* --- Переменные --- */
+:root {
+    --logistics-text-main: #1f2937;
+    --logistics-text-muted: #4b5563;
+    --logistics-bg-green-light: #dcfce7;
+    --logistics-text-green: #16a34a;
+    --logistics-bg-blue-light: #dbeafe;
+    --logistics-text-blue: #2563eb;
+    --logistics-bg-orange-light: #ffedd5;
+    --logistics-text-orange: #ea580c;
+    --bullet-color: #22c55e;
+  }
+  
+  /* Секция */
+  .logistics-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  /* Контейнер */
+  .logistics-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .logistics-container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .logistics-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  /* --- Typography --- */
+  .logistics-title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  @media (min-width: 640px) {
+    .logistics-title {
+      font-size: 3rem;
+      line-height: 1;
+    }
+  }
+  
+  .logistics-description {
+    font-size: 1.125rem;
+    color: var(--logistics-text-muted);
+    margin-bottom: 2rem;
+    line-height: 1.625;
+    max-width: 48rem;
+  }
+  
+  .subsection-title {
+    font-size: 1.875rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+  
+  /* --- Features Grid --- */
+  .logistics-intro-block {
+    margin-bottom: 4rem;
+  }
+  
+  .features-grid {
+    display: grid;
+    /* ИЗМЕНЕНИЕ: 2 колонки по умолчанию (мобильные) */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; /* Уменьшили gap для мобильных */
+    margin-bottom: 3rem;
+  }
+  
+  /* На планшетах оставляем 2, но меняем стиль item */
+  @media (min-width: 640px) {
+    .features-grid {
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .features-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .feature-item {
+    display: flex;
+    /* ИЗМЕНЕНИЕ: На мобильных иконка сверху (column), чтобы влезло в 2 ряда */
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  /* На планшетах и выше возвращаем иконку сбоку */
+  @media (min-width: 640px) {
+    .feature-item {
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+  
+  .feature-icon-wrapper {
+    flex-shrink: 0;
+  }
+  
+  .feature-title {
+    font-size: 1rem; /* Чуть меньше на мобильных */
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  @media (min-width: 640px) {
+    .feature-title {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  .feature-text {
+    color: var(--logistics-text-muted);
+    font-size: 0.8rem; /* Чуть меньше на мобильных */
+    line-height: 1.4;
+  }
+  
+  @media (min-width: 640px) {
+    .feature-text {
+      font-size: 0.875rem;
+    }
+  }
+  
+  /* --- Shared Icons Styles --- */
+  .icon-box {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-box.green {
+    background-color: var(--logistics-bg-green-light);
+    color: var(--logistics-text-green);
+  }
+  
+  .icon-box.blue {
+    background-color: var(--logistics-bg-blue-light);
+    color: var(--logistics-text-blue);
+  }
+  
+  .icon-box.orange {
+    background-color: var(--logistics-bg-orange-light);
+    color: var(--logistics-text-orange);
+  }
+  
+  .icon-sm {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  /* --- Delivery Methods --- */
+  .methods-block {
+    margin-bottom: 4rem;
+  }
+  
+  .methods-grid {
+    display: grid;
+    /* ИЗМЕНЕНИЕ: 2 колонки по умолчанию (мобильные) */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .methods-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+  }
+  
+  /* Стилизация карточки метода */
+  .method-card {
+    /* ИЗМЕНЕНИЕ: Меньше отступы на мобильных */
+    padding: 1rem;
+    text-align: center;
+    transition: box-shadow 0.3s;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    
+    /* Flexbox чтобы выровнять высоту */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  @media (min-width: 640px) {
+    .method-card {
+      padding: 2rem;
+    }
+  }
+  
+  .method-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .icon-box-large {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    display: inline-flex;
+    margin-bottom: 1rem;
+  }
+  
+  .icon-box-large.green {
+    background-color: var(--logistics-bg-green-light);
+    color: var(--logistics-text-green);
+  }
+  
+  .icon-md {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .method-title {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  
+  @media (min-width: 640px) {
+    .method-title {
+      font-size: 1.25rem;
+    }
+  }
+  
+  .method-text {
+    color: var(--logistics-text-muted);
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+  
+  /* --- Regions --- */
+  .regions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .regions-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .region-card {
+    padding: 1.5rem;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+  }
+  
+  @media (min-width: 640px) {
+    .region-card {
+      padding: 2rem;
+    }
+  }
+  
+  .region-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .region-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .country-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .country-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--logistics-text-main);
+    font-size: 0.9rem;
+  }
+  
+  .bullet-point {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--bullet-color);
+    border-radius: 9999px;
+    flex-shrink: 0;
+  }

@@ -1,0 +1,140 @@
+/* --- Переменные --- */
+:root {
+    --bg-gray-50: #f9fafb;
+    --text-gray-600: #4b5563;
+    --color-green-600: #16a34a;
+    --color-white: #ffffff;
+  }
+  
+  /* Секция */
+  .services-section {
+    padding-top: 5rem;    /* py-20 */
+    padding-bottom: 5rem;
+    background-color: var(--bg-gray-50);
+  }
+  
+  /* Контейнер */
+  .services-container {
+    max-width: 80rem; /* max-w-7xl */
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .services-container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .services-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  /* --- Заголовок секции --- */
+  .services-header {
+    text-align: center;
+    margin-bottom: 4rem; /* mb-16 */
+  }
+  
+  .section-title {
+    font-size: 2.25rem; /* text-4xl */
+    line-height: 2.5rem;
+    margin-bottom: 1rem; /* mb-4 */
+    font-weight: 400; /* Обычно заголовки такого размера не bold, если не указано иное */
+  }
+  
+  @media (min-width: 640px) {
+    .section-title {
+      font-size: 3rem; /* text-5xl */
+      line-height: 1;
+    }
+  }
+  
+  .title-decoration {
+    width: 6rem; /* w-24 */
+    height: 0.25rem; /* h-1 */
+    background-color: var(--color-green-600);
+    margin: 0 auto;
+  }
+  
+  /* --- Сетка (Grid) --- */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem; /* gap-8 */
+  }
+  
+  @media (min-width: 768px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
+    }
+  }
+  
+  /* --- Карточка --- */
+  /* .service-card применяется к компоненту Card */
+  .service-card {
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    background-color: var(--color-white); /* Card обычно белый */
+    border-radius: 0.5rem; /* Стандартное скругление для Card */
+    border: 1px solid #e5e7eb; /* Легкая рамка */
+  }
+  
+  .service-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-xl */
+  }
+  
+  /* Изображение */
+  .card-image-wrapper {
+    position: relative;
+    height: 16rem; /* h-64 */
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Иконка поверх картинки */
+  .card-icon-badge {
+    position: absolute;
+    top: 1rem;  /* top-4 */
+    left: 1rem; /* left-4 */
+    background-color: var(--color-green-600);
+    color: var(--color-white);
+    padding: 0.75rem; /* p-3 */
+    border-radius: 9999px; /* rounded-full */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .service-icon {
+    width: 2rem; /* w-8 */
+    height: 2rem; /* h-8 */
+  }
+  
+  /* Контент карточки */
+  .card-content {
+    padding: 2rem; /* p-8 */
+  }
+  
+  .card-title {
+    font-size: 1.5rem; /* text-2xl */
+    line-height: 2rem;
+    margin-bottom: 1rem; /* mb-4 */
+    font-weight: 600;
+  }
+  
+  .card-text {
+    color: var(--text-gray-600);
+    line-height: 1.625; /* leading-relaxed */
+    font-size: 1rem;
+  }

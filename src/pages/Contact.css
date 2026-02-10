@@ -1,0 +1,227 @@
+/* Contact Section */
+.contact-section {
+    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 0;
+  }
+  
+  .contact-container {
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  /* Header */
+  .contact-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .contact-badge {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: #dcfce7;
+    color: #15803d;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+  }
+  
+  /* Grid Layout */
+  .contact-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+  
+  @media (min-width: 768px) {
+    .contact-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Contact Cards */
+  .contact-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 1.25rem;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    overflow: hidden;
+  }
+  
+  .contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  
+  .contact-card:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Card Variants */
+  .email::before {
+    background: linear-gradient(135deg, #16a34a, #15803d);
+  }
+  
+  .email:hover {
+    border-color: #16a34a;
+  }
+  
+  .whatsapp::before {
+    background: linear-gradient(135deg, #25D366, #1da851);
+  }
+  
+  .whatsapp:hover {
+    border-color: #25D366;
+  }
+  
+  .telegram::before {
+    background: linear-gradient(135deg, #0088cc, #0077b3);
+  }
+  
+  .telegram:hover {
+    border-color: #0088cc;
+  }
+  
+  /* Card Header */
+  .contact-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-card-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+  }
+  
+  /* Icon Wrapper */
+  .contact-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .contact-card:hover .contact-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+  }
+  
+  .email .contact-icon-wrapper {
+    background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+  }
+  
+  .whatsapp .contact-icon-wrapper {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+  }
+  
+  .telegram .contact-icon-wrapper {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  }
+  
+  .contact-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .email .contact-icon {
+    color: #16a34a;
+  }
+  
+  .whatsapp .contact-icon {
+    color: #059669;
+  }
+  
+  .telegram .contact-icon {
+    color: #0284c7;
+  }
+  
+  /* Description */
+  .contact-description {
+    font-size: 0.875rem;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+    flex-grow: 1;
+  }
+  
+  /* Contact Value */
+  .contact-value {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.875rem 1rem;
+    background: #f9fafb;
+    border-radius: 0.625rem;
+    font-weight: 500;
+    color: #111827;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-card:hover .contact-value {
+    background: #f3f4f6;
+  }
+  
+  .contact-arrow {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #6b7280;
+    transition: transform 0.3s ease;
+  }
+  
+  .contact-card:hover .contact-arrow {
+    transform: translateX(4px);
+    color: #111827;
+  }
+  
+  /* Responsive */
+  @media (max-width: 767px) {
+    .contact-section {
+      padding: 8rem 0;
+    }
+  
+    .contact-title {
+      font-size: 2rem;
+    }
+  
+    .contact-card {
+      padding: 1.5rem;
+    }
+  }
+  

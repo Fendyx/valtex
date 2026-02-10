@@ -1,0 +1,227 @@
+/* --- Основные переменные и сброс --- */
+:root {
+    --color-green-900: #14532d;
+    --color-green-600: #16a34a;
+    --color-green-200: #bbf7d0;
+    --color-gray-700: #374151;
+    --color-white: #ffffff;
+  }
+  
+  /* Фиксация хедера */
+  .header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    transition: all 0.3s ease;
+  }
+  
+  /* Общий контейнер (аналог max-w-7xl mx-auto) */
+  .container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  /* --- Верхняя полоса (Top Bar) --- */
+  .header-top {
+    background-color: rgba(20, 83, 45, 0.95); /* green-900/95 */
+    color: var(--color-white);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .header-top.scrolled {
+    background-color: var(--color-green-900); /* Сплошной цвет при скролле */
+  }
+  
+  .header-top-content {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    font-size: 0.875rem; /* text-sm */
+  }
+  
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .contact-link:hover {
+    color: var(--color-green-200);
+  }
+  
+  .contact-text {
+    display: none;
+  }
+  
+  @media (min-width: 640px) {
+    .contact-text {
+      display: inline;
+    }
+  }
+  
+  /* Иконки */
+  .icon-sm {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .icon-md {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  /* --- Основная навигация (Nav) --- */
+  .header-nav {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px); /* backdrop-blur-md */
+    transition: all 0.3s ease;
+  }
+  
+  .header-nav.scrolled {
+    background-color: var(--color-white);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* shadow-md */
+  }
+  
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  /* Логотип */
+  .nav-logo {
+    font-size: 1.5rem; /* text-2xl */
+    color: var(--color-white);
+    transition: color 0.3s;
+    text-decoration: none;
+  }
+  
+  .nav-logo.scrolled {
+    color: var(--color-green-900);
+  }
+  
+  /* Ссылки меню (Desktop) */
+  .nav-links-desktop {
+    display: none;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .nav-links-desktop {
+      display: flex;
+    }
+  }
+  
+  .nav-link {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .nav-link:hover {
+    color: var(--color-green-200);
+  }
+  
+  /* Стили ссылок при скролле */
+  .nav-link.scrolled {
+    color: var(--color-gray-700);
+  }
+  
+  .nav-link.scrolled:hover {
+    color: var(--color-green-600);
+  }
+  
+  /* --- Мобильное меню --- */
+  .mobile-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-white);
+  }
+  
+  .mobile-toggle.scrolled {
+    color: var(--color-green-900);
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-toggle {
+      display: none;
+    }
+  }
+  
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  /* Скрываем мобильное меню на десктопе, если оно вдруг открыто */
+  @media (min-width: 768px) {
+    .mobile-menu {
+      display: none;
+    }
+  }
+  
+  /* Утилита для кнопки внутри мобильного меню */
+  .mobile-btn-wrapper {
+    width: 100%;
+  }
+  
+  .full-width-btn {
+    width: 100%;
+  }
+
+  /* ... старые стили ... */
+
+/* Стили для кнопки в хедере */
+.header-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-green-600);
+    color: white;
+    border-radius: 0.375rem; /* rounded-md */
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .header-btn:hover {
+    background-color: var(--color-green-900);
+  }
+  
+  /* Кнопка на всю ширину для мобильных */
+  .full-width-btn {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box; /* Важно, чтобы padding не ломал ширину */
+  }

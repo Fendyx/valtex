@@ -1,0 +1,102 @@
+/* --- Переменные --- */
+:root {
+    --stats-color-white: #ffffff;
+    --stats-color-green-100: #dcfce7;
+    --stats-overlay-color: rgba(20, 83, 45, 0.85); /* bg-green-900/85 */
+  }
+  
+  /* Секция */
+  .stats-section {
+    position: relative;
+    padding-top: 5rem;    /* py-20 */
+    padding-bottom: 5rem;
+  }
+  
+  /* --- Фон --- */
+  .stats-bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+  
+  .stats-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .stats-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--stats-overlay-color);
+  }
+  
+  /* --- Контейнер --- */
+  .stats-container {
+    position: relative; /* Чтобы быть поверх фона */
+    z-index: 10;
+    max-width: 80rem; /* max-w-7xl */
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .stats-container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .stats-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  /* --- Сетка (Grid) --- */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на мобильных */
+    gap: 2rem; /* gap-8 */
+  }
+  
+  @media (min-width: 768px) {
+    .stats-grid {
+      grid-template-columns: repeat(4, 1fr); /* 4 колонки на md+ */
+    }
+  }
+  
+  /* --- Элемент статистики --- */
+  .stat-item {
+    text-align: center;
+    color: var(--stats-color-white);
+  }
+  
+  .stat-value {
+    font-size: 2.25rem; /* text-4xl */
+    line-height: 2.5rem;
+    margin-bottom: 0.5rem; /* mb-2 */
+    font-weight: 700; /* Обычно цифры делают жирными */
+  }
+  
+  @media (min-width: 640px) {
+    .stat-value {
+      font-size: 3rem; /* text-5xl */
+      line-height: 1;
+    }
+  }
+  
+  .stat-label {
+    font-size: 1.125rem; /* text-lg */
+    line-height: 1.75rem;
+    color: var(--stats-color-green-100);
+  }
